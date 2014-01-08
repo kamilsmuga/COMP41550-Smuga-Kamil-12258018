@@ -21,7 +21,6 @@
 		48CE0380187DC844008B750A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48CE0362187DC844008B750A /* UIKit.framework */; };
 		48CE0388187DC844008B750A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48CE0386187DC844008B750A /* InfoPlist.strings */; };
 		48CE038A187DC844008B750A /* HelloUCDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CE0389187DC844008B750A /* HelloUCDTests.m */; };
-		48CE0394187DC944008B750A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48CE0393187DC944008B750A /* MainWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		48CE0385187DC844008B750A /* HelloUCDTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloUCDTests-Info.plist"; sourceTree = "<group>"; };
 		48CE0387187DC844008B750A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		48CE0389187DC844008B750A /* HelloUCDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloUCDTests.m; sourceTree = "<group>"; };
-		48CE0393187DC944008B750A /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				48CE0370187DC844008B750A /* Main.storyboard */,
-				48CE0393187DC944008B750A /* MainWindow.xib */,
 				48CE0373187DC844008B750A /* HelloUCDViewController.h */,
 				48CE0374187DC844008B750A /* HelloUCDViewController.m */,
 				48CE0376187DC844008B750A /* Images.xcassets */,
@@ -232,7 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48CE0394187DC944008B750A /* MainWindow.xib in Resources */,
 				48CE0377187DC844008B750A /* Images.xcassets in Resources */,
 				48CE0369187DC844008B750A /* InfoPlist.strings in Resources */,
 				48CE0372187DC844008B750A /* Main.storyboard in Resources */,
@@ -465,6 +461,7 @@
 				48CE038F187DC844008B750A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48CE0390187DC844008B750A /* Build configuration list for PBXNativeTarget "HelloUCDTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +470,7 @@
 				48CE0392187DC844008B750A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
