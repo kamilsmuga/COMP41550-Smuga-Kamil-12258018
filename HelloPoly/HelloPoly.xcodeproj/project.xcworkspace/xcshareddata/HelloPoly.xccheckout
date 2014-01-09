@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6E4B7CB2-A5B0-4482-9A55-05A36FA576C9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HelloPoly</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3FB3003C-7CB6-4686-99F9-49593AB83C8E</key>
+		<string>https://github.com/kamilsmuga/COMP41550-Smuga-Kamil-12258018.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HelloPoly/HelloPoly.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3FB3003C-7CB6-4686-99F9-49593AB83C8E</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kamilsmuga/COMP41550-Smuga-Kamil-12258018.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3FB3003C-7CB6-4686-99F9-49593AB83C8E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3FB3003C-7CB6-4686-99F9-49593AB83C8E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>COMP41550-Smuga-Kamil-12258018</string>
+		</dict>
+	</array>
+</dict>
+</plist>
