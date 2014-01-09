@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Hello Poly View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="HelloPolyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tks-uy-Yvr"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yoe-Xk-rNE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of sides: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3i-Na-yKR">
+                                <rect key="frame" x="92" y="86" width="136" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rI-nd-BJB">
+                                <rect key="frame" x="242" y="175" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Increase">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="increase:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="omf-W0-i4e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSx-x2-c4T">
+                                <rect key="frame" x="20" y="175" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Decrease">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="decrease:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Cf6-b6-DIc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVJ-n5-Xs2" userLabel="sidesNumber">
+                                <rect key="frame" x="236" y="86" width="41" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="41" id="5i3-d4-fRX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="polygonName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puX-Ru-2SB" userLabel="polygonName">
+                                <rect key="frame" x="20" y="125" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="puX-Ru-2SB" secondAttribute="centerY" constant="148.5" id="35q-P9-HtU"/>
+                            <constraint firstItem="pVJ-n5-Xs2" firstAttribute="top" secondItem="Tks-uy-Yvr" secondAttribute="bottom" constant="66" id="9Ni-wP-fOm"/>
+                            <constraint firstItem="2rI-nd-BJB" firstAttribute="top" secondItem="puX-Ru-2SB" secondAttribute="bottom" constant="29" id="C1O-fp-gYh"/>
+                            <constraint firstItem="puX-Ru-2SB" firstAttribute="trailing" secondItem="2rI-nd-BJB" secondAttribute="trailing" id="Gj5-Ws-9Nt"/>
+                            <constraint firstAttribute="centerX" secondItem="pVJ-n5-Xs2" secondAttribute="centerX" constant="-96.5" id="IOV-Sh-EtH"/>
+                            <constraint firstItem="puX-Ru-2SB" firstAttribute="top" secondItem="s3i-Na-yKR" secondAttribute="bottom" constant="18" id="OfU-5z-nmv"/>
+                            <constraint firstItem="nSx-x2-c4T" firstAttribute="leading" secondItem="puX-Ru-2SB" secondAttribute="leading" id="ToC-1A-q2L"/>
+                            <constraint firstAttribute="centerY" secondItem="s3i-Na-yKR" secondAttribute="centerY" constant="187.5" id="V14-JH-R0d"/>
+                            <constraint firstItem="s3i-Na-yKR" firstAttribute="centerY" secondItem="pVJ-n5-Xs2" secondAttribute="centerY" id="cta-sL-TaV"/>
+                            <constraint firstItem="nSx-x2-c4T" firstAttribute="top" secondItem="puX-Ru-2SB" secondAttribute="bottom" constant="29" id="f1m-aY-7wV"/>
+                            <constraint firstAttribute="centerX" secondItem="s3i-Na-yKR" secondAttribute="centerX" id="fic-Ir-wQX"/>
+                            <constraint firstAttribute="centerY" secondItem="2rI-nd-BJB" secondAttribute="centerY" constant="94" id="ge6-nE-YkR"/>
+                            <constraint firstAttribute="centerY" secondItem="nSx-x2-c4T" secondAttribute="centerY" constant="94" id="lLy-tK-hO4"/>
+                            <constraint firstItem="2rI-nd-BJB" firstAttribute="leading" secondItem="nSx-x2-c4T" secondAttribute="trailing" constant="157" id="leX-wg-8fF"/>
+                            <constraint firstItem="s3i-Na-yKR" firstAttribute="top" secondItem="Tks-uy-Yvr" secondAttribute="bottom" constant="66" id="rs2-f5-qXY"/>
+                            <constraint firstAttribute="centerX" secondItem="puX-Ru-2SB" secondAttribute="centerX" id="vqV-1y-3oa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="model" destination="nf1-aG-pEZ" id="3zF-18-Yk3"/>
+                        <outlet property="numberOfSlidesLabel" destination="pVJ-n5-Xs2" id="xxq-Ba-csv"/>
+                        <outlet property="polygonName" destination="puX-Ru-2SB" id="P2H-db-oqq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <customObject id="nf1-aG-pEZ" userLabel="Model" customClass="PolygonShape"/>
+            </objects>
+            <point key="canvasLocation" x="43" y="29"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
