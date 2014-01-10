@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PolygonShape.h"
+#import "PolygonView.h"
 
 @interface HelloPolyViewController : UIViewController
 @property (strong, nonatomic) IBOutlet PolygonShape *model;
@@ -15,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *polygonName;
 - (IBAction)increase:(UIButton *)sender;
 - (IBAction)decrease:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet PolygonView *polygonView;
 
 @end
