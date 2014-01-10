@@ -22,6 +22,7 @@
 		488ADB20187F18FA0091F779 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 488ADB1E187F18FA0091F779 /* InfoPlist.strings */; };
 		488ADB22187F18FA0091F779 /* HelloPolyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 488ADB21187F18FA0091F779 /* HelloPolyTests.m */; };
 		488ADB2D187F1F720091F779 /* PolygonShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 488ADB2B187F1F720091F779 /* PolygonShape.m */; };
+		488ADB30187F5F7F0091F779 /* PolygonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 488ADB2F187F5F7F0091F779 /* PolygonView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		488ADB21187F18FA0091F779 /* HelloPolyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloPolyTests.m; sourceTree = "<group>"; };
 		488ADB2B187F1F720091F779 /* PolygonShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonShape.m; sourceTree = "<group>"; };
 		488ADB2C187F1F720091F779 /* PolygonShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonShape.h; sourceTree = "<group>"; };
+		488ADB2E187F5F7F0091F779 /* PolygonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonView.h; sourceTree = "<group>"; };
+		488ADB2F187F5F7F0091F779 /* PolygonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolygonView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,11 +118,12 @@
 		488ADAFC187F18FA0091F779 /* HelloPoly */ = {
 			isa = PBXGroup;
 			children = (
-				488ADB2B187F1F720091F779 /* PolygonShape.m */,
-				488ADB2C187F1F720091F779 /* PolygonShape.h */,
+				488ADB2E187F5F7F0091F779 /* PolygonView.h */,
+				488ADB2F187F5F7F0091F779 /* PolygonView.m */,
 				488ADB08187F18FA0091F779 /* Main.storyboard */,
 				488ADB0B187F18FA0091F779 /* HelloPolyViewController.h */,
 				488ADB0C187F18FA0091F779 /* HelloPolyViewController.m */,
+				488ADB31187F5F8B0091F779 /* Model */,
 				488ADB0E187F18FA0091F779 /* Images.xcassets */,
 				488ADAFD187F18FA0091F779 /* Supporting Files */,
 			);
@@ -155,6 +159,15 @@
 				488ADB1E187F18FA0091F779 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		488ADB31187F5F8B0091F779 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				488ADB2B187F1F720091F779 /* PolygonShape.m */,
+				488ADB2C187F1F720091F779 /* PolygonShape.h */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				488ADB30187F5F7F0091F779 /* PolygonView.m in Sources */,
 				488ADB03187F18FA0091F779 /* main.m in Sources */,
 				488ADB0D187F18FA0091F779 /* HelloPolyViewController.m in Sources */,
 				488ADB2D187F1F720091F779 /* PolygonShape.m in Sources */,
@@ -467,6 +481,7 @@
 				488ADB27187F18FA0091F779 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		488ADB28187F18FA0091F779 /* Build configuration list for PBXNativeTarget "HelloPolyTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +490,7 @@
 				488ADB2A187F18FA0091F779 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
