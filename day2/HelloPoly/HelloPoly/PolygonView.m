@@ -21,8 +21,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
-        //[self drawRect:frame];
     }
     return self;
 }
@@ -77,15 +75,10 @@
         
         [self drawFromPoint:p1 ToPoint:p2 UsingContext:context];
     }
-    
-  //  for (int i = 0; i < -2)
-    
-    
 }
 
 - (void)drawFromPoint:(CGPoint)first ToPoint:(CGPoint)second UsingContext:(CGContextRef)context
 {
-  //  CGContextBeginPath(context);
     CGContextMoveToPoint(context, first.x, first.y); //start at this point
     CGContextAddLineToPoint(context, second.x, second.y); //draw to this point
     CGContextStrokePath(context);
