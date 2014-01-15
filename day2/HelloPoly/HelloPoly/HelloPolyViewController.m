@@ -40,6 +40,8 @@
 -(void)viewDidLoad
 {
     [self updateUI];
+    [self.polygonView setUserInteractionEnabled:YES];
+    [self setPanGestureForView:self.polygonView];
 }
 -(void)awakeFromNib
 {
@@ -61,5 +63,37 @@
     self.polygonView.numberOfSides = self.model.numberOfSides;
     [self.polygonView redraw];
 }
+
+-(void)setPanGestureForView:(UIView *)panView
+{
+
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+   
+    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
+    
+    [self.polygonView addGestureRecognizer:swipeLeft];
+    [self.polygonView addGestureRecognizer:swipeRight];
+
+    
+}
+
+- (void)handleSwipe:(UISwipeGestureRecognizer *)swipe {
+    
+    if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
+        self.model.numberOfSides++;
+        [self updateUI];
+        [self updateDefaults];
+        
+    }
+    if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
+        self.model.numberOfSides--;
+        [self updateUI];
+        [self updateDefaults];
+        
+    }
+}
+
 
 @end
