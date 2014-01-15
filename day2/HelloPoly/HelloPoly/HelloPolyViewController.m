@@ -9,7 +9,7 @@
 #import "HelloPolyViewController.h"
 
 @interface HelloPolyViewController ()
-@property (weak, nonatomic) NSUserDefaults *defaults;
+@property (strong, nonatomic) NSUserDefaults *defaults;
 @end
 
 @implementation HelloPolyViewController
@@ -18,14 +18,7 @@
 {
     if (!_model)
     {
-        self.defaults = [NSUserDefaults standardUserDefaults];
-        NSInteger numberOfSides = [self.defaults integerForKey:@"numberOfSides"];
-        if (numberOfSides == 0)
-        {
-            numberOfSides = 5;
-        }
-        _model = [PolygonShape alloc];
-        _model = [_model initWithNumberOfSides:numberOfSides];
+        _model = [PolygonShape new];
         
     }
     return _model;
@@ -35,12 +28,14 @@
      NSLog(@"I’m in the decrease method");
     self.model.numberOfSides--;
     [self updateUI];
+    [self updateDefaults];
 }
 - (void)increase:(UIButton *)sender
 {
     NSLog(@"I’m in the increase method");
     self.model.numberOfSides++;
     [self updateUI];
+    [self updateDefaults];
 }
 -(void)viewDidLoad
 {
@@ -49,6 +44,14 @@
 -(void)awakeFromNib
 {
     NSLog(@"My polygon: %@", self.model.name);
+    self.defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger numberOfSides = [self.defaults integerForKey:@"numberOfSides"];
+    self.model.numberOfSides = numberOfSides;
+}
+-(void)updateDefaults
+{
+    [self.defaults setInteger:self.model.numberOfSides forKey:@"numberOfSides"];
+    [self.defaults synchronize];
 }
 -(void) updateUI
 {
@@ -57,8 +60,6 @@
     [self.numberOfSlidesLabel sizeToFit];
     self.polygonView.numberOfSides = self.model.numberOfSides;
     [self.polygonView redraw];
-    [self.defaults setInteger:self.model.numberOfSides forKey:@"numberOfSides"];
-    [self.defaults synchronize];
 }
 
 @end
