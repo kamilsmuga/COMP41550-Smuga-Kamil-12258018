@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D6EF01DE-7658-446A-83D4-D865F23D3F0A</string>
+	<string>0762DED8-F953-4095-8E9E-035CFDAF6CA8</string>
 	<key>IDESourceControlProjectName</key>
 	<string>HelloPoly</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,7 +14,7 @@
 		<string>https://github.com/kamilsmuga/COMP41550-Smuga-Kamil-12258018.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>day2/HelloPoly/HelloPoly.xcodeproj/project.xcworkspace</string>
+	<string>assignment2/HelloPoly/HelloPoly.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>3FB3003C-7CB6-4686-99F9-49593AB83C8E</key>

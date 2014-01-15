@@ -1,4 +1,10 @@
-Things done to display logo and label properly on iPhones 4 and 5:
+- Name: HelloUCD
+- Kamil Smuga
+- Student Number: 12258018
+- email: smugakamil@gmail.com
+- comments:
+
+1. Things done to display logo and label properly on iPhones 4 and 5:
 - A view in Main.storyboard contains a Container View. Container View is
   center aligned to X and Y to a Superview. Also, a Container View has fixed Height
   and Width constraints.
