@@ -92,6 +92,8 @@
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
         [segue.destinationViewController setPhotoURL:[FlickrFetcher urlForPhoto:self.photos[indexPath.row] format:FlickrPhotoFormatMedium640]];
         [segue.destinationViewController navigationItem].title = cell.textLabel.text;
+        PhotoVC *pvc = [segue destinationViewController];
+        pvc.dict = self.photos[indexPath.row];
     }
 }
 

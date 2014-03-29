@@ -8,12 +8,22 @@
 
 #import "PhotoVC.h"
 #import "FlickrFetcher.h"
+#import "Photo+Flickr.h"
+#import "AppDelegate.h"
 
 @interface PhotoVC ()
 @property (nonatomic, weak) IBOutlet UIImageView *imageView;
 @end
 
 @implementation PhotoVC
+
+
+- (IBAction)addToFavorites:(UIBarButtonItem *)sender {
+    NSManagedObjectContext *context = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
+    [Photo photoWithDict:self.dict inManagedObjectContext:context];
+    [((AppDelegate *)[UIApplication sharedApplication].delegate) saveContext];
+}
+
 
 - (void)setPhotoURL:(NSURL *)photoURL
 {

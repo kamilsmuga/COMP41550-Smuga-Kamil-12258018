@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1271654318E6EB6A00F358E7 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1271654218E6EB6A00F358E7 /* Photo.m */; };
+		1271654918E6EBB000F358E7 /* Photo+Flickr.m in Sources */ = {isa = PBXBuildFile; fileRef = 1271654618E6EBB000F358E7 /* Photo+Flickr.m */; };
+		1271654A18E6EBB000F358E7 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1271654718E6EBB000F358E7 /* CoreDataTableViewController.m */; };
+		1271654E18E6EC6000F358E7 /* FavoritesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1271654D18E6EC6000F358E7 /* FavoritesTVC.m */; };
 		129DDACD18E03F770010F121 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129DDACC18E03F770010F121 /* Foundation.framework */; };
 		129DDACF18E03F770010F121 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129DDACE18E03F770010F121 /* CoreGraphics.framework */; };
 		129DDAD118E03F770010F121 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 129DDAD018E03F770010F121 /* UIKit.framework */; };
@@ -46,6 +50,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1271654118E6EB6A00F358E7 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		1271654218E6EB6A00F358E7 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		1271654518E6EBAF00F358E7 /* Photo+Flickr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Photo+Flickr.h"; sourceTree = "<group>"; };
+		1271654618E6EBB000F358E7 /* Photo+Flickr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Photo+Flickr.m"; sourceTree = "<group>"; };
+		1271654718E6EBB000F358E7 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		1271654818E6EBB000F358E7 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		1271654C18E6EC6000F358E7 /* FavoritesTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesTVC.h; sourceTree = "<group>"; };
+		1271654D18E6EC6000F358E7 /* FavoritesTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesTVC.m; sourceTree = "<group>"; };
 		129DDAC918E03F770010F121 /* FlickrBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		129DDACC18E03F770010F121 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		129DDACE18E03F770010F121 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -113,6 +125,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1271654418E6EB7800F358E7 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1271654518E6EBAF00F358E7 /* Photo+Flickr.h */,
+				1271654618E6EBB000F358E7 /* Photo+Flickr.m */,
+				129DDAE318E03F780010F121 /* FlickrBrowser.xcdatamodeld */,
+				1271654118E6EB6A00F358E7 /* Photo.h */,
+				1271654218E6EB6A00F358E7 /* Photo.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		1271654B18E6EC1100F358E7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				129DDB1318E0406F0010F121 /* MapVC.h */,
+				129DDB1418E0406F0010F121 /* MapVC.m */,
+				129DDB1518E0406F0010F121 /* PhotosTVC.h */,
+				129DDB1618E0406F0010F121 /* PhotosTVC.m */,
+				129DDB1718E0406F0010F121 /* PhotoVC.h */,
+				129DDB1818E0406F0010F121 /* PhotoVC.m */,
+				129DDB1918E0406F0010F121 /* TagsTVC.h */,
+				129DDB1A18E0406F0010F121 /* TagsTVC.m */,
+				129DDAE618E03F780010F121 /* MainViewController.h */,
+				129DDAE718E03F780010F121 /* MainViewController.m */,
+				129DDAE918E03F780010F121 /* FlipsideViewController.h */,
+				129DDAEA18E03F780010F121 /* FlipsideViewController.m */,
+				1271654718E6EBB000F358E7 /* CoreDataTableViewController.m */,
+				1271654818E6EBB000F358E7 /* CoreDataTableViewController.h */,
+				1271654C18E6EC6000F358E7 /* FavoritesTVC.h */,
+				1271654D18E6EC6000F358E7 /* FavoritesTVC.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		129DDAC018E03F770010F121 = {
 			isa = PBXGroup;
 			children = (
@@ -149,28 +196,17 @@
 		129DDAD418E03F770010F121 /* FlickrBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				1271654B18E6EC1100F358E7 /* Controller */,
+				1271654418E6EB7800F358E7 /* CoreData */,
 				129DDB0E18E0406F0010F121 /* Annotation.h */,
 				129DDB0F18E0406F0010F121 /* Annotation.m */,
 				129DDB1018E0406F0010F121 /* FlickrAPIKey.h */,
 				129DDB1118E0406F0010F121 /* FlickrFetcher.h */,
 				129DDB1218E0406F0010F121 /* FlickrFetcher.m */,
-				129DDB1318E0406F0010F121 /* MapVC.h */,
-				129DDB1418E0406F0010F121 /* MapVC.m */,
-				129DDB1518E0406F0010F121 /* PhotosTVC.h */,
-				129DDB1618E0406F0010F121 /* PhotosTVC.m */,
-				129DDB1718E0406F0010F121 /* PhotoVC.h */,
-				129DDB1818E0406F0010F121 /* PhotoVC.m */,
-				129DDB1918E0406F0010F121 /* TagsTVC.h */,
-				129DDB1A18E0406F0010F121 /* TagsTVC.m */,
 				129DDADD18E03F770010F121 /* AppDelegate.h */,
 				129DDADE18E03F770010F121 /* AppDelegate.m */,
 				129DDAE018E03F770010F121 /* Main.storyboard */,
-				129DDAE618E03F780010F121 /* MainViewController.h */,
-				129DDAE718E03F780010F121 /* MainViewController.m */,
-				129DDAE918E03F780010F121 /* FlipsideViewController.h */,
-				129DDAEA18E03F780010F121 /* FlipsideViewController.m */,
 				129DDAEC18E03F780010F121 /* Images.xcassets */,
-				129DDAE318E03F780010F121 /* FlickrBrowser.xcdatamodeld */,
 				129DDAD518E03F770010F121 /* Supporting Files */,
 			);
 			path = FlickrBrowser;
@@ -306,11 +342,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1271654318E6EB6A00F358E7 /* Photo.m in Sources */,
 				129DDB1E18E0406F0010F121 /* PhotosTVC.m in Sources */,
+				1271654A18E6EBB000F358E7 /* CoreDataTableViewController.m in Sources */,
 				129DDB1B18E0406F0010F121 /* Annotation.m in Sources */,
+				1271654E18E6EC6000F358E7 /* FavoritesTVC.m in Sources */,
 				129DDB1D18E0406F0010F121 /* MapVC.m in Sources */,
 				129DDB1F18E0406F0010F121 /* PhotoVC.m in Sources */,
 				129DDADF18E03F770010F121 /* AppDelegate.m in Sources */,
+				1271654918E6EBB000F358E7 /* Photo+Flickr.m in Sources */,
 				129DDB1C18E0406F0010F121 /* FlickrFetcher.m in Sources */,
 				129DDAE518E03F780010F121 /* FlickrBrowser.xcdatamodeld in Sources */,
 				129DDADB18E03F770010F121 /* main.m in Sources */,

@@ -11,5 +11,6 @@
 @interface PhotoVC : UIViewController
 
 @property (nonatomic, strong) NSURL *photoURL;
+@property (nonatomic, strong) NSDictionary *dict;
 
 @end
