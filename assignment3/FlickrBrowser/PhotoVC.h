@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) NSURL *photoURL;
 @property (nonatomic, strong) NSDictionary *dict;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *favs;
 
 @end

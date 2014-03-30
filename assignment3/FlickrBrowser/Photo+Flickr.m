@@ -44,5 +44,25 @@
     return photo;
 }
 
++(BOOL)existsInDB:(NSString *)unique inManagedObjectContext:(NSManagedObjectContext *)context
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Photo"];
+    request.predicate = [NSPredicate predicateWithFormat:@"unique = %@", unique];
+    
+    NSError *error;
+    NSArray *matches = [context executeFetchRequest:request error:&error];
+    
+    if (!matches || error || ([matches count] > 1)) {
+        NSLog(@"Error inside Photo+Flickr that does not suppose to happen!");
+        return NO;
+    }
+    else if ([matches count] == 0) {
+        return NO;
+    }
+    
+    return TRUE;
+
+}
+
 
 @end

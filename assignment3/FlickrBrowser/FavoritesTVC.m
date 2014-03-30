@@ -73,17 +73,19 @@
     UIGraphicsEndImageContext();
     
     NSURL *url = [NSURL alloc];
-    url = [url initWithString:photo.imageURL];
+    if (photo.imageURL) {
+        url = [url initWithString:photo.imageURL];
     
-    [FlickrFetcher startFlickrFetch:url completion:^(NSData *jsonData) {
-        if (jsonData)
-        {
-            UIImage *thumbnailImage = [UIImage imageWithData:jsonData];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                cell.imageView.image = thumbnailImage;
-            });
-        }
-    }];
+        [FlickrFetcher startFlickrFetch:url completion:^(NSData *jsonData) {
+            if (jsonData)
+            {
+                UIImage *thumbnailImage = [UIImage imageWithData:jsonData];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    cell.imageView.image = thumbnailImage;
+                });
+            }
+        }];
+    }
     
     return cell;
 
@@ -100,8 +102,10 @@
         url = [url initWithString:photo.imageURL];
         [segue.destinationViewController setPhotoURL:url];
         [segue.destinationViewController navigationItem].title = cell.textLabel.text;
-       // PhotoVC *pvc = [segue destinationViewController];
-       // pvc.dict = self.photos[indexPath.row];
+        PhotoVC *pvc = [segue destinationViewController];
+        NSDictionary *dict = [[NSDictionary alloc ]initWithObjectsAndKeys:photo.unique,FLICKR_PHOTO_ID, nil];
+      //  [dict setValue:[NSString ]photo.unique forKey:@"FLICKR_PHOTO_ID"];
+        pvc.dict = dict;
     }
 }
 

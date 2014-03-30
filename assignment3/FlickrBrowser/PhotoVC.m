@@ -13,17 +13,36 @@
 
 @interface PhotoVC ()
 @property (nonatomic, weak) IBOutlet UIImageView *imageView;
+@property (nonatomic)  NSManagedObjectContext *context;
 @end
 
 @implementation PhotoVC
 
-
-- (IBAction)addToFavorites:(UIBarButtonItem *)sender {
-    NSManagedObjectContext *context = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
-    [Photo photoWithDict:self.dict inManagedObjectContext:context];
-    [((AppDelegate *)[UIApplication sharedApplication].delegate) saveContext];
+-(NSManagedObjectContext *)context
+{
+    if (!_context) {
+        _context = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
+    }
+    return _context;
 }
 
+- (IBAction)addToFavorites:(UIBarButtonItem *)sender {
+    [Photo photoWithDict:self.dict inManagedObjectContext:self.context];
+    [((AppDelegate *)[UIApplication sharedApplication].delegate) saveContext];
+    self.context = nil;
+    sender.enabled = NO;
+    sender.title = nil;
+}
+
+-(void)viewDidLoad
+{
+    
+    if ([Photo existsInDB:self.dict[FLICKR_PHOTO_ID] inManagedObjectContext:self.context ]) {
+        self.favs.enabled = NO;
+        self.favs.title = nil;
+    }
+
+}
 
 - (void)setPhotoURL:(NSURL *)photoURL
 {

@@ -11,5 +11,6 @@
 @interface Photo (Flickr)
 
 + (Photo *)photoWithDict:(NSDictionary *)dict inManagedObjectContext:(NSManagedObjectContext *)context;
++ (BOOL)existsInDB:(NSString *)unique inManagedObjectContext:(NSManagedObjectContext *)context;
 
 @end
