@@ -41,7 +41,7 @@
         self.favs.enabled = NO;
         self.favs.title = nil;
     }
-
+    
 }
 
 - (void)setPhotoURL:(NSURL *)photoURL

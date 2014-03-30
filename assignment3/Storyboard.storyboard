@@ -81,6 +81,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <gestureRecognizers/>
                                 <connections>
                                     <segue destination="rcE-tc-uaB" kind="push" identifier="Show PhotoVC" id="YGI-Xx-pqO"/>
                                 </connections>
@@ -113,7 +114,7 @@
             </objects>
             <point key="canvasLocation" x="84" y="794"/>
         </scene>
-        <!--PhotosTVC-->
+        <!--PhotosTVC - Photos-->
         <scene sceneID="Pk7-Uu-OXh">
             <objects>
                 <tableViewController id="TKh-rS-419" customClass="PhotosTVC" sceneMemberID="viewController">
@@ -139,13 +140,13 @@
                             <outlet property="delegate" destination="TKh-rS-419" id="DNX-J4-ZYq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="HS1-Jb-Ac1"/>
+                    <navigationItem key="navigationItem" title="Photos" id="HS1-Jb-Ac1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sro-NF-EtC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1116" y="794"/>
         </scene>
-        <!--PhotoVC - Title-->
+        <!--PhotoVC - Photo-->
         <scene sceneID="2TA-rf-UyZ">
             <objects>
                 <viewController id="rcE-tc-uaB" customClass="PhotoVC" sceneMemberID="viewController">
@@ -158,7 +159,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="eci-Hv-gfk">
+                    <navigationItem key="navigationItem" title="Photo" id="eci-Hv-gfk">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hEb-l9-rC1">
                             <connections>
                                 <action selector="addToFavorites:" destination="rcE-tc-uaB" id="h0Y-bK-x98"/>
@@ -174,7 +175,7 @@
             </objects>
             <point key="canvasLocation" x="1642" y="794"/>
         </scene>
-        <!--MapVC-->
+        <!--MapVC - Map-->
         <scene sceneID="RtM-rc-IZF">
             <objects>
                 <viewController autoresizesArchivedViewToFullSize="NO" extendedLayoutIncludesOpaqueBars="YES" id="Mq8-Pt-i6b" customClass="MapVC" sceneMemberID="viewController">
@@ -215,7 +216,7 @@
                         </connections>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="NoU-M1-vsY"/>
+                    <navigationItem key="navigationItem" title="Map" id="NoU-M1-vsY"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="vZM-k9-EWD" id="0Dw-Tu-M5h"/>
@@ -272,6 +273,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="RcZ-RX-h3i"/>
+        <segue reference="YGI-Xx-pqO"/>
     </inferredMetricsTieBreakers>
 </document>

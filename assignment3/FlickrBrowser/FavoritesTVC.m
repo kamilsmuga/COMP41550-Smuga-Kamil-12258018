@@ -19,14 +19,6 @@
 
 @implementation FavoritesTVC
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (NSManagedObjectContext *)context
 {
@@ -53,11 +45,6 @@
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -75,7 +62,7 @@
     NSURL *url = [NSURL alloc];
     if (photo.imageURL) {
         url = [url initWithString:photo.imageURL];
-    
+        
         [FlickrFetcher startFlickrFetch:url completion:^(NSData *jsonData) {
             if (jsonData)
             {
@@ -86,10 +73,31 @@
             }
         }];
     }
-    
     return cell;
-
 }
+
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView
+           editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)     tableView:(UITableView *)tableView
+    commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+     forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Photo *photo = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [[self context] deleteObject:photo];
+    [((AppDelegate *)[UIApplication sharedApplication].delegate) saveContext];
+}
+
+- (void)tableView:(UITableView *)tableView
+didEndEditingRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [tableView reloadData];
+}
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -104,21 +112,8 @@
         [segue.destinationViewController navigationItem].title = cell.textLabel.text;
         PhotoVC *pvc = [segue destinationViewController];
         NSDictionary *dict = [[NSDictionary alloc ]initWithObjectsAndKeys:photo.unique,FLICKR_PHOTO_ID, nil];
-      //  [dict setValue:[NSString ]photo.unique forKey:@"FLICKR_PHOTO_ID"];
         pvc.dict = dict;
     }
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
